@@ -1,0 +1,78 @@
+[build-system]
+requires = [
+  "setuptools >= 40.9.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "branch"
+version = "0.0.1"
+authors = [
+  {name="Alex Kwiatkowski", email="alex+py@fremantle.io"},
+]
+description = "A streaming toolkit with bottomless storage"
+readme = "README.md"
+requires-python = ">= 3.11"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+  "fastapi ~=0.108.0",
+  "fsspec[gcs] ~=2023.12.2",
+  "furl ~=2.1.2",
+  "nuitka ~=1.9.5",
+  "pydantic ~=2.5.0",
+  "pydantic-settings ~=2.1.0",
+  "pyinstaller ~=6.3.0",
+  "pyright ~=1.1.0",
+  "PyYAML ~=6.0.1",
+  "result ~=0.16.0",
+  "typer[all] ~=0.9.0",
+  "uuid7 ~=0.1.0",
+  "uvicorn ~=0.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "requests-mock ~=1.11.0",
+  "ruff ~=0.1.0",
+  "oterm ~=0.1.18",
+  "pygments ~=2.17.0",
+  "pyhamcrest >=2.1.0",
+  "pyright ~=1.1.0",
+  "pytest ~=8.0.0.rc1",
+  "pytest-cov ~=4.1.0",
+  "pytest-recording ~=0.13.1",
+  "pytest-unordered ~=0.5.2",
+  "pytest-watcher ~=0.3.0",
+  "vcrpy ~=5.1.0",
+]
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git-rewrite",
+  ".hg",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "node_modules",
+  "venv",
+]
+[tool.ruff.lint]
+# ignore = ["F401"]

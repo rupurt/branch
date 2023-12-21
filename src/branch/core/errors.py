@@ -1,0 +1,2 @@
+class UniqueError(RuntimeError):
+    pass

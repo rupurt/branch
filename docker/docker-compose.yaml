@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  branch:
+    image: rupurt/branch:latest
+    volumes:
+      - .branch:/branch_data
+    ports:
+      - 9000:9000
+      - 8999:8999
+    environment:
+      - PORT=9000
+      - UI_PORT=8999
+      - STORAGE_LOCATION=local:///branch_data

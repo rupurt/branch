@@ -1,0 +1,14 @@
+.direnv
+.coverage
+.ruff_cache
+.venv
+__pycache__/
+*.egg-info/
+*.spec
+build/
+dist/
+nuitka/
+branch.yaml
+branch.test.yaml
+.local
+.branch
